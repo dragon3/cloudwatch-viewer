@@ -1,0 +1,9 @@
+* webapp
+dotcloud deploy -t perl dragon3.cwv
+
+* mysql
+dotcloud deploy -t mysql dragon3.cwvdb
+dotcloud info dragon3.cwvdb
+dotcloud run louis.db -- mysql -uroot \'-p$ROOT_PASSWORD\'
+create database cwv;
+

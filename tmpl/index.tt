@@ -1,0 +1,37 @@
+[% WRAPPER 'include/layout.tt' %]
+
+<hr class="space">
+
+<div class="span-24 last">
+  [% FOREACH n IN notifications %]
+  <div class="notification" id="[% n.ts %]">
+    <div class="n-title">
+      [% IF n.Type != 'Notification' %]
+      <img src="[% uri_for('/static/img/information.png') %]" width="16" height="16" alt="" /> [% n.Type %]
+      [% ELSE %]
+        [% IF n.AlarmType == 'OK' %]
+      <img src="[% uri_for('/static/img/ok_state.png') %]" width="16" height="16" alt="" />
+        [% ELSIF n.AlarmType == 'ALARM' %]
+      <img src="[% uri_for('/static/img/alarm_state.png') %]" width="16" height="16" alt="" />
+        [% ELSIF n.AlarmType == 'INSUFFICIENT_DATA' %]
+      <img src="[% uri_for('/static/img/insufficient_data_state.png') %]" width="16" height="16" alt="" />
+        [% ELSE %]
+      <img src="[% uri_for('/static/img/email.png') %]" width="16" height="16" alt="" />
+        [% END %]
+      [% n.Subject %]
+      [% END %]
+    </div>
+    <div class="n-ts">
+      [% n.Timestamp %]
+    </div>
+    <div class="n-message">
+      [% n.Message %]
+    </div>
+  </div>
+  [% END %]
+</div>
+
+<hr class="space">
+<script src="[% uri_for('/static/js/main.js') %]"></script>
+
+[% END %]

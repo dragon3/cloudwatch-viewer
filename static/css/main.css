@@ -1,0 +1,49 @@
+header {
+  height: 50px;
+  font-size: 36px;
+  padding: 2px;
+  text-align: center;
+  border-bottom: 1px dotted #ddd; }
+  header a {
+    color: #09F;
+    font-weight: bold;
+    text-decoration: none; }
+
+footer {
+    text-align: right;
+    padding-right: 10px;
+    margin-top: 3em;
+    padding-top: 2px; }
+    footer a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+    }
+
+.notification {
+  margin-bottom: 1.5em;
+  padding: .2em .5em 1em;
+}
+.notification .n-title {
+  font-weight: bold;
+  font-size: 1.8em;
+}
+.notification .n-title img {
+  vertical-align: middle;
+}
+.notification .n-ts {
+  color: #999;
+  text-align: right;
+  font-size: .5em;
+}
+.notification .n-message {
+  margin-left: 2.5em;
+  color: #333;
+}
+.odd {
+  background-color: #eee;
+}
+
+/* smart phones */
+@media screen and (max-device-width: 480px) {
+}
