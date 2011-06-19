@@ -7,3 +7,7 @@ dotcloud info dragon3.cwvdb
 dotcloud run louis.db -- mysql -uroot \'-p$ROOT_PASSWORD\'
 create database cwv;
 
+* pit
+ppit set cloudwatchviewer
+# DB setting: db_user,db_pass,db_port
+# Basic Auth: ba_user,ba_pass
